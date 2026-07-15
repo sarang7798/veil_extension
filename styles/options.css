@@ -1,0 +1,148 @@
+:root {
+  --ink: #2a2420;
+  --muted: rgba(42, 36, 32, 0.68);
+  --faint: rgba(42, 36, 32, 0.42);
+  --line: rgba(42, 36, 32, 0.14);
+  --bg: #d9d2c5;
+  --card: rgba(243, 238, 228, 0.92);
+  --accent: #8c6b3f;
+  --font-display: "Libre Baskerville", Georgia, serif;
+  --font-ui: "Manrope", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 252, 245, 0.7) 0%, transparent 50%),
+    linear-gradient(180deg, #e3dccf 0%, var(--bg) 100%);
+}
+
+.page {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+.kicker {
+  margin: 0;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0.35rem 0 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.3rem;
+}
+
+.lede,
+.hint {
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+
+.card {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+  font-weight: 500;
+}
+
+.row,
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.field {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.field span {
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+select,
+input[type="text"],
+input[type="url"],
+input[type="range"] {
+  font: inherit;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.55rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+  background: transparent;
+  border: 0;
+  padding: 0.35rem 0;
+}
+
+input[type="range"]:disabled {
+  opacity: 0.45;
+}
+
+select {
+  max-width: 15rem;
+}
+
+.primary,
+.ghost {
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  font: inherit;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: rgba(140, 107, 63, 0.14);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--muted);
+}
+
+.foot {
+  margin-top: 1.25rem;
+  min-height: 1.2rem;
+  color: var(--accent);
+  font-size: 0.82rem;
+}

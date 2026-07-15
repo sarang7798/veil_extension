@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veil — Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="kicker">Veil</p>
+        <h1>Settings</h1>
+        <p class="lede">
+          A quiet museum visit in your new tab. Monetization stays optional —
+          never spammy.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Experience</h2>
+        <label class="row">
+          <span>Show clock &amp; plaque</span>
+          <input type="checkbox" id="setting-chrome" checked />
+        </label>
+        <label class="row">
+          <span>24-hour clock</span>
+          <input type="checkbox" id="setting-24h" checked />
+        </label>
+        <label class="row">
+          <span>Show seconds</span>
+          <input type="checkbox" id="setting-seconds" />
+        </label>
+        <label class="row">
+          <span>Reveal style</span>
+          <select id="setting-reveal">
+            <option value="paint">Paint strokes</option>
+            <option value="mist">Mist lift</option>
+            <option value="mosaic">Mosaic dissolve</option>
+            <option value="curtain">Curtain blinds</option>
+          </select>
+        </label>
+        <label class="row">
+          <span>Image source</span>
+          <select id="setting-source">
+            <option value="met">The Met (Open Access)</option>
+            <option value="local">Bundled catalog (offline)</option>
+            <option value="remote">Remote daily (Picsum)</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Progress preview (debug)</h2>
+        <p class="hint">
+          Simulate how much of today’s painting is unveiled without waiting for the clock.
+          Turn this off to follow real local time again (midnight = 0%, end of day = 100%).
+        </p>
+        <label class="row">
+          <span>Override live day progress</span>
+          <input type="checkbox" id="setting-preview-enable" />
+        </label>
+        <label class="field">
+          <span>Unveil amount (<span id="setting-preview-value">0%</span>)</span>
+          <input type="range" id="setting-preview" min="0" max="100" value="0" step="1" disabled />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Veil+ (premium sketch)</h2>
+        <p class="hint">
+          Placeholder for a future unlock: past-day gallery, early clarity, custom
+          catalogs. Toggle locally to preview footer messaging — no payment wired.
+        </p>
+        <label class="row">
+          <span>Preview Veil+ unlocked</span>
+          <input type="checkbox" id="setting-premium" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Partner slot</h2>
+        <p class="hint">
+          Single quiet footer mention. Leave blank to hide. Disclose clearly if
+          publishing to the Chrome Web Store.
+        </p>
+        <label class="field">
+          <span>Label</span>
+          <input type="text" id="partner-label" placeholder="Seasonal partner — soft focus" />
+        </label>
+        <label class="field">
+          <span>URL</span>
+          <input type="url" id="partner-href" placeholder="https://example.com" />
+        </label>
+        <button type="button" class="primary" id="save-partner">Save partner</button>
+        <button type="button" class="ghost" id="clear-partner">Clear</button>
+      </section>
+
+      <p class="foot" id="status" role="status"></p>
+    </main>
+    <script src="scripts/options.js"></script>
+  </body>
+</html>

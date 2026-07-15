@@ -1,0 +1,44 @@
+﻿[
+    {
+        "id":  "01",
+        "title":  "Aurora Ridge",
+        "file":  "assets/days/01.jpg",
+        "seed":  "veil-aurora-ridge"
+    },
+    {
+        "id":  "02",
+        "title":  "Harbor Dusk",
+        "file":  "assets/days/02.jpg",
+        "seed":  "veil-harbor-dusk"
+    },
+    {
+        "id":  "03",
+        "title":  "Glass Forest",
+        "file":  "assets/days/03.jpg",
+        "seed":  "veil-glass-forest"
+    },
+    {
+        "id":  "04",
+        "title":  "Quiet Dune",
+        "file":  "assets/days/04.jpg",
+        "seed":  "veil-quiet-dune"
+    },
+    {
+        "id":  "05",
+        "title":  "Bronze Rain",
+        "file":  "assets/days/05.jpg",
+        "seed":  "veil-bronze-rain"
+    },
+    {
+        "id":  "06",
+        "title":  "Ember Coast",
+        "file":  "assets/days/06.jpg",
+        "seed":  "veil-ember-coast"
+    },
+    {
+        "id":  "07",
+        "title":  "Silver Still",
+        "file":  "assets/days/07.jpg",
+        "seed":  "veil-silver-still"
+    }
+]

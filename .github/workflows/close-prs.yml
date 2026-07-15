@@ -1,0 +1,41 @@
+name: Close public pull requests
+
+on:
+  pull_request_target:
+    types: [opened, reopened, ready_for_review]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  close-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment and close pull request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = [
+              'Thanks for your interest in **Veil**.',
+              '',
+              'This repository does **not** accept public pull requests or merges.',
+              'Please fork the repo for personal experiments, and see [CONTRIBUTING.md](https://github.com/sarang7798/veil_extension/blob/master/CONTRIBUTING.md) for details.',
+              '',
+              'For collaboration or permission requests, contact [@sarang7798](https://github.com/sarang7798).',
+              '',
+              '_This pull request is being closed automatically._',
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              state: 'closed',
+            });

@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Veil — Daily Image Reveal",
+  "short_name": "Veil",
+  "version": "1.1.0",
+  "description": "A museum visit in your new tab — a real painting slowly reveals itself through the day.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://fonts.googleapis.com/*",
+    "https://fonts.gstatic.com/*",
+    "https://images.metmuseum.org/*",
+    "https://picsum.photos/*",
+    "https://fastly.picsum.photos/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Veil — Daily Image Reveal",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.metmuseum.org https://picsum.photos https://fastly.picsum.photos data: blob:;"
+  }
+}
